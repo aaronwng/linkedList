@@ -75,55 +75,104 @@ bool LinkedList::isFound(int foodId)
 //food item has a unique id, if two food items have exactly the same name,
 //then insert it into the list in the increasing order of their IDs.
 //Return value: true if it is successfully inserted and false in case of failures.
+// bool LinkedList::add(string foodName, int foodId, double foodPrice)
+// {
+//   Food *temp = head;
+//   Food *prev = temp;
+//   Food *newFood = new Food;
+//   newFood->foodName = foodName;
+//   newFood->id = foodId;
+//   newFood->price = foodPrice;
+//   if (head == NULL){
+//     head = newFood;
+//   }
+//   else if(head->foodName.compare(newFood->foodName) > 0){
+//     head = newFood;
+//     head->next = temp;
+//   }
+//   else {
+//     while (temp->foodName.compare(newFood->foodName) < 0){
+//       prev = temp;
+//       temp = temp->next;
+//       if (temp == NULL){
+//         temp = prev;
+//         break;
+//       }
+//     }
+//     if (temp == prev){
+//       prev->next = newFood;
+//     }
+//     else if (temp->foodName.compare(newFood->foodName) == 0){
+//       if (temp->id < newFood->id){
+//         prev = temp;
+//         temp = temp->next;
+//         prev->next = newFood;
+//         newFood->next = temp;
+//       }
+//       else {
+//         if (temp == head){  
+//           newFood->next = prev;
+//           head = newFood;
+//         }
+//         else{ 
+//           prev->next = newFood;
+//           newFood->next = temp;
+//         }
+//       }
+//     }
+//     else {
+//       prev->next = newFood;
+//       newFood->next = temp;
+//     }
+//   }
+//   return true;
+// }
+
+
 bool LinkedList::add(string foodName, int foodId, double foodPrice)
 {
-  Food *temp = head;
-  Food *prev = temp;
+  // New food first
   Food *newFood = new Food;
   newFood->foodName = foodName;
   newFood->id = foodId;
   newFood->price = foodPrice;
+
+  // if the list is empty, then just give the head;
   if (head == NULL){
     head = newFood;
+    return true;
   }
-  else if(head->foodName.compare(newFood->foodName) > 0){
+  
+  // if list not empty, start to find the correct position
+  Food *prev = head;
+  Food *temp = prev;
+
+  
+  // compare the name with prev, we need to keep tempName not equals to newFood name;
+  while (temp && newFood->foodName.compare(temp->foodName) != 0 && newFood->foodName.compare(prev->foodName)>0){
+    prev = temp;
+    temp = temp->next;
+  }
+
+  // compare the id with temp, we need to keep newFood's name equals to tempName, and compare with the temp.
+  while(temp && newFood->foodName.compare(temp->foodName) == 0  && newFood->id>temp->id){
+    prev = temp;
+    temp = temp->next;
+  }
+  
+  // if prev equal head and temp, then we need to insert at first place.
+  if(prev == head && prev == temp){
     head = newFood;
-    head->next = temp;
+    newFood->next = temp;
   }
-  else {
-    while (temp->foodName.compare(newFood->foodName) < 0){
-      prev = temp;
-      temp = temp->next;
-      if (temp == NULL){
-        temp = prev;
-        break;
-      }
-    }
-    if (temp == prev){
-      prev->next = newFood;
-    }
-    else if (temp->foodName.compare(newFood->foodName) == 0){
-      if (temp->id < newFood->id){
-        prev = temp;
-        temp = temp->next;
-        prev->next = newFood;
-        newFood->next = temp;
-      }
-      else {
-        if (temp == head){  
-          newFood->next = prev;
-          head = newFood;
-        }
-        else{ 
-          prev->next = newFood;
-          newFood->next = temp;
-        }
-      }
-    }
-    else {
-      prev->next = newFood;
-      newFood->next = temp;
-    }
+  // if temp equals NULL, then we just insert to the last.
+  else if(temp == NULL){
+    prev->next = newFood;
+  }
+  // if in the middle
+  else{
+    prev->next = newFood;
+    newFood->next = temp;
   }
   return true;
 }
