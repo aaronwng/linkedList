@@ -148,8 +148,8 @@ bool LinkedList::add(string foodName, int foodId, double foodPrice)
   Food *temp = head;
 
   
-  // compare the name with prev, we need to keep tempName not equals to newFood name;
-  while (temp && newFood->foodName.compare(temp->foodName) != 0 && newFood->foodName.compare(temp->foodName)>0){
+  // compare the name with temp;
+  while (temp && newFood->foodName.compare(temp->foodName)>0){
     prev = temp;
     temp = temp->next;
   }
