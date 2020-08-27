@@ -144,12 +144,12 @@ bool LinkedList::add(string foodName, int foodId, double foodPrice)
   }
   
   // if list not empty, start to find the correct position
-  Food *prev = head;
-  Food *temp = prev;
+  Food *prev = NULL;
+  Food *temp = head;
 
   
   // compare the name with prev, we need to keep tempName not equals to newFood name;
-  while (temp && newFood->foodName.compare(temp->foodName) != 0 && newFood->foodName.compare(prev->foodName)>0){
+  while (temp && newFood->foodName.compare(temp->foodName) != 0 && newFood->foodName.compare(temp->foodName)>0){
     prev = temp;
     temp = temp->next;
   }
@@ -161,7 +161,7 @@ bool LinkedList::add(string foodName, int foodId, double foodPrice)
   }
   
   // if prev equal head and temp, then we need to insert at first place.
-  if(prev == head && prev == temp){
+  if(prev == NULL){
     head = newFood;
     newFood->next = temp;
   }
