@@ -1,0 +1,430 @@
+Sample Run of CSE310 Assignment #1 (User input is in bold)
+Choice Action
+------ ------
+A Add Food
+C Change A Food Name
+D Display All Foods
+F Find A Food
+P Change Food Price
+R Remove Food by ID
+S Remove Food by Name
+Q Quit
+? Display Help
+
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+chips
+Enter food id:
+3003
+Enter the food price:
+2.99
+The food "chips" is added
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+bacon
+Enter food id:
+2006
+Enter the food price:
+4.99
+The food "bacon" is added
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+apple
+Enter food id:
+1005
+Enter the food price:
+1.99
+The food "apple" is added
+
+What action would you like to perform?
+D
+apple   1005      $1.99
+bacon   2006      $4.99
+chips   3003      $2.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+wine
+Enter food id:
+9003
+Enter the food price:
+13.99
+The food "wine" is added
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+apple
+Enter food id:
+1003
+Enter the food price:
+1.59
+The food "apple" is added
+
+What action would you like to perform?
+D
+
+apple   1003      $1.59
+apple   1005      $1.99
+bacon   2006      $4.99
+chips   3003      $2.99
+wine    9003      $13.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+apple
+Enter food id:
+1007
+Enter the food price:
+2.35
+The food "apple" is added
+
+What action would you like to perform?
+D
+apple   1003      $1.59
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $4.99
+chips   3003      $2.99
+wine    9003      $13.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+chips
+Enter food id:
+3001
+Enter the food price:
+1.99
+The food "chips" is added
+
+What action would you like to perform?
+D
+apple   1003      $1.59
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $4.99
+chips   3001      $1.99
+chips   3003      $2.99
+wine    9003      $13.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+wine
+Enter food id:
+9001
+Enter the food price:
+11.99
+The food "wine" is added
+
+What action would you like to perform?
+D
+apple   1003      $1.59
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $4.99
+chips   3001      $1.99
+chips   3003      $2.99
+wine    9001      $11.99
+wine    9003      $13.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+wine
+Enter food id:
+9007
+Enter the food price:
+18.99
+The food "wine" is added
+
+What action would you like to perform?
+D
+apple   1003      $1.59
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $4.99
+chips   3001      $1.99
+chips   3003      $2.99
+wine    9001      $11.99
+wine    9003      $13.99
+wine    9007      $18.99
+
+What action would you like to perform?
+F
+
+Please enter the food id you want to search:
+1003
+
+Food with ID #: 1003 was found
+
+What action would you like to perform?
+F
+
+Please enter the food id you want to search:
+3005
+
+Food with ID #: 3005 was not found
+
+What action would you like to perform?
+F
+
+Please enter the food id you want to search:
+9007
+
+Food with ID #: 9007 was found
+
+What action would you like to perform?
+P
+
+Please enter the food id you want to change the price:
+1003
+
+Please enter the new food price:
+2.99
+Food with ID #: 1003 price was updated
+
+What action would you like to perform?
+D
+apple   1003      $2.99
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $4.99
+chips   3001      $1.99
+chips   3003      $2.99
+wine    9001      $11.99
+wine    9003      $13.99
+wine    9007      $18.99
+
+What action would you like to perform?
+P
+
+Please enter the food id you want to change the price:
+2007
+Food with ID #: 2007 does not exist
+
+What action would you like to perform?
+P
+
+Please enter the food id you want to change the price:
+2006
+
+Please enter the new food price:
+5.99
+Food with ID #: 2006 price was updated
+
+What action would you like to perform?
+D
+apple   1003      $2.99
+apple   1005      $1.99
+apple   1007      $2.35
+bacon   2006      $5.99
+chips   3001      $1.99
+chips   3003      $2.99
+wine    9001      $11.99
+wine    9003      $13.99
+wine    9007      $18.99
+
+What action would you like to perform?
+R
+
+Please enter the food ID to remove:
+9007
+
+Food with ID #: 9007 was removed
+
+What action would you like to perform?
+D
+apple   1003     $2.99
+apple   1005     $1.99
+apple   1007     $2.35
+bacon   2006     $5.99
+chips   3001     $1.99
+chips   3003     $2.99
+wine    9001     $11.99
+wine    9003     $13.99
+
+What action would you like to perform?
+R
+
+Please enter the food ID to remove:
+1001
+
+Food with ID #: 1001 does not exist
+
+What action would you like to perform?
+R
+
+Please enter the food ID to remove:
+1003
+
+Food with ID #: 1003 was removed
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+apple    1007      $2.35
+bacon    2006      $5.99
+chips    3001      $1.99
+chips    3003      $2.99
+wine     9001      $11.99
+wine     9003      $13.99
+
+What action would you like to perform?
+R
+
+Please enter the food ID to remove:
+3003
+
+Food with ID #: 3003 was removed
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+apple    1007      $2.35
+bacon    2006      $5.99
+chips    3001      $1.99
+wine     9001      $11.99
+wine     9003      $13.99
+
+What action would you like to perform?
+C
+Please enter the food ID which you want to change the name:
+1007
+
+Please enter the new name: pizza
+
+Food with ID #: 1007 name was changed
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+bacon    2006      $5.99
+chips    3001      $1.99
+pizza    1007      $2.35
+wine     9001      $11.99
+wine     9003      $13.99
+
+What action would you like to perform?
+P
+
+Please enter the food id you want to change the price:
+1007
+
+Please enter the new food price:
+8.99
+Food with ID #: 1007 price was updated
+
+What action would you like to perform?
+D
+apple    1005     $1.99
+bacon    2006     $5.99
+chips    3001     $1.99
+pizza    1007     $8.99
+wine     9001     $11.99
+wine     9003     $13.99
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+chips
+Enter food id:
+3000
+Enter the food price:
+2.99
+The food "chips" is added
+
+What action would you like to perform?
+A
+Please enter the food information:
+Enter the food name:
+apple
+Enter food id:
+1009
+Enter the food price:
+3.99
+The food "apple" is added
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+apple    1009      $3.99
+bacon    2006      $5.99
+chips    3000      $2.99
+chips    3001      $1.99
+pizza    1007      $8.99
+wine     9001      $11.99
+wine     9003      $13.99
+
+What action would you like to perform?
+S
+Please enter the food name to remove:
+wine
+
+Food with name: wine was removed
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+apple    1009      $3.99
+bacon    2006      $5.99
+chips    3000      $2.99
+chips    3001      $1.99
+pizza    1007      $8.99
+
+What action would you like to perform?
+S
+Please enter the food name to remove:
+chips
+
+Food with name: chips was removed
+
+What action would you like to perform?
+D
+apple    1005      $1.99
+apple    1009      $3.99
+bacon    2006      $5.99
+pizza    1007      $8.99
+
+What action would you like to perform?
+S
+Please enter the food name to remove:
+ginger
+No such food name found.
+
+Food with name: ginger does not exist
+
+What action would you like to perform?
+S
+Please enter the food name to remove:
+apple
+
+Food with name: apple was removed
+
+What action would you like to perform?
+D
+bacon    2006      $5.99
+pizza    1007      $8.99
+
+What action would you like to perform?
+Q
+The number of deleted food items is: 2
